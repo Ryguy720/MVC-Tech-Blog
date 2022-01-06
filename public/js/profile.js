@@ -1,3 +1,5 @@
+
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -18,7 +20,7 @@ const newFormHandler = async (event) => {
       document.location.replace('/profile');
     } else {
       console.log("Err")
-      alert('Failed to create project');
+      console.log('Failed to create project');
       
     }
   }
@@ -47,3 +49,16 @@ document
 // document
 //   .querySelector('.project-list')
 //   .addEventListener('click', delButtonHandler);
+async function getBlog(){
+
+
+const response = await fetch(`/api/blogs/dashboard`);
+
+if (response.ok) {
+  // document.location.replace('/profile');
+  console.log(response)
+} else {
+  console.log('No Blogs Created');
+}
+}
+getBlog();

@@ -23,14 +23,16 @@
     </form>
   </div>
 
-  {{#if Blogdata.length}}
+  {{#if Blogget.length}}
   <div class="col-md-6 blog-list">
     <h3>Blogs Created:</h3>
 
-    {{#each projects as |project|}}
+    {{#each Blogget as |blog|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        <h4>{{blog.name}}</h4>
+        <p>{{blog.description}}</p>
+        {{!-- <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4> --}}
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
