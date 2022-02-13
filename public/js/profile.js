@@ -52,10 +52,10 @@ document
 async function getBlog(){
 
 
-const response = await fetch(`/api/blogs/dashboard`);
+const response = await fetch(`/api/blogRoutes/dashboard`);
 
 if (response.ok) {
-  // document.location.replace('/profile');
+  document.location.replace('/profile');
   console.log(response)
 } else {
   console.log('No Blogs Created');
